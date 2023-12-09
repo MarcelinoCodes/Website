@@ -181,6 +181,8 @@
 
         /* Media query for screens less than 800px wide */
     @media (max-width: 800px) {
+
+
         .menu {
             display: none; /* Hide the menu items by default */
             flex-direction: column;
@@ -513,7 +515,7 @@
                 <table>
                     <tr>
                         <td>
-                            <div id="dash-container" >
+                            <div id="dash-container-1" >
                                 <iframe src="https://marcelinocodes.github.io/dash1/" style="background-color: white; height: 150%; width: 100%;">
         
                                 </iframe>
@@ -526,7 +528,7 @@
                 <table>
                     <tr>
                         <td>
-                            <div id="dash-container" >
+                            <div id="dash-container-2" >
                                 <iframe src="https://marcelinocodes.github.io/dash2again/" style="background-color: white; height: 150%; width: 100%;">
         
                                 </iframe>
@@ -539,7 +541,7 @@
                 <table>
                     <tr>
                         <td>
-                            <div id="dash-container" >
+                            <div id="dash-container-3" >
                                 <iframe src="https://marcelinocodes.github.io/dash4/" style="background-color: white; height: 150%; width: 100%;">
         
                                 </iframe>
@@ -552,7 +554,7 @@
                 <table>
                     <tr>
                         <td>
-                            <div id="dash-container" >
+                            <div id="dash-container-4" >
                                 <iframe src="https://marcelinocodes.github.io/dash3/" style="background-color: white; height: 150%; width: 100%;">
         
                                 </iframe>
@@ -573,6 +575,40 @@
 
 
 <script type="text/javascript">
+
+$(document).ready(function() {
+            // Check screen size on page load
+            checkScreenSize();
+
+            // Check screen size on window resize
+            $(window).resize(function() {
+                checkScreenSize();
+            });
+
+            function checkScreenSize() {
+                if ($(window).width() < 800) {
+                    // Remove the div
+                    $('#M').remove();
+                }
+            }
+        });
+
+        $(document).ready(function() {
+            // Check screen size on page load
+            checkScreenSize();
+
+            // Check screen size on window resize
+            $(window).resize(function() {
+                checkScreenSize();
+            });
+
+            function checkScreenSize() {
+                if ($(window).width() < 800) {
+                    // Remove the div
+                    $('#dash-container-1').remove();
+                }
+            }
+        });
 
 
   //Machine learning algorithm is here
