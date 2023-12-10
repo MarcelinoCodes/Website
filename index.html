@@ -181,7 +181,9 @@
 
         /* Media query for screens less than 800px wide */
     @media (max-width: 800px) {
-
+        #fixlist {
+                display: none;
+            }
 
         .menu {
             display: none; /* Hide the menu items by default */
@@ -228,7 +230,7 @@
           </div>
             <ul class="menu" id="menu" style="margin-left: 0%;">
                 <li><a href="#A">Application</a></li>
-                <li><a href="#M">Map</a></li>
+                <li><a id='fixlist' href="#M">Map</a></li>
                 <li><a href="#D" onclick="">Dashboard</a></li>
             </ul>
       </div>
@@ -659,6 +661,24 @@ $(document).ready(function() {
     $(document).ready(function () {
             $('#dash-container').load('/dash');
         });
+
+    // Function to change the source of the iframe
+    function changeIframeSource(newSource) {
+        var iframe = document.getElementById('trouble');
+        iframe.src = newSource;
+    }
+
+    // Function to check screen size and change iframe source accordingly
+    function checkScreenSize() {
+        var newSource = (window.innerWidth < 1200) ? 'https://marcelinocodes.github.io/mobiledash/' : 'https://marcelinocodes.github.io/dash1/';
+        changeIframeSource(newSource);
+    }
+
+    // Initial check on page load
+    checkScreenSize();
+
+    // Add an event listener for window resize
+    window.addEventListener('resize', checkScreenSize);
 
 
     </script>
