@@ -613,6 +613,8 @@ $(document).ready(function() {
   function runthis(){
   currentURL=document.getElementById('testsubject').value;
 
+  let currentURL = currentURL.replace(/\s+$/, '');
+
   x1=currentURL.length 
 
   x2=countSpecialCharacters(currentURL)
