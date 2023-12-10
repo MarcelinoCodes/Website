@@ -613,7 +613,7 @@ $(document).ready(function() {
   function runthis(){
   currentURL=document.getElementById('testsubject').value;
 
-  let currentURL = currentURL.replace(/\s+$/, '');
+  currentURL = currentURL.trim();
 
   x1=currentURL.length 
 
