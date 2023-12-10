@@ -672,5 +672,18 @@ $(document).ready(function() {
 
     // Add an event listener for window resize
     window.addEventListener('resize', checkScreenSize);
+
+    // Function to handle the "Enter" key press and trigger button click
+    function handleEnterKey(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('StopRefreshing').click();
+        }
+    }
+
+    // Add an event listener for keydown on the document
+    document.addEventListener('keydown', handleEnterKey);
+
+
     </script>
 </html>
